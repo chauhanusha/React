@@ -10,7 +10,7 @@ function MyApp(){   //this syntax is parsed in to objects to create trees
 }
 
 //to check if we can directly pass the element (it will not run because it doesn't follow the syntax of react rendering function)
-// const reactElement = {
+// const reactElement = {     //we are directly creating object
 //     type: 'a',
 //     props: {
 //         href: 'https://google.com',
@@ -19,7 +19,7 @@ function MyApp(){   //this syntax is parsed in to objects to create trees
 //     children: 'Click me to visit google'
 // }
 
-//another way of creating object
+//another way of creating object  => this is supported by react
 const anotherElement = (
     <a href="https://google.com" target='_blank'>Visit Google</a>
 )
@@ -32,11 +32,11 @@ const reactElement = React.createElement(
     'a',
     {href: 'https://google.com', target: '_blank'},
     'Click me to visit google',
-    anotherUser   //at last we can add variables 
+    anotherUser   //at last we can add variables in react element
 )
 
 //we are rendering the app component using reactDom
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(     //creatRoot is basically creating the tree
     //this is also allowed => MyApp(), but we should not use it
     reactElement
 
