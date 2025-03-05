@@ -5,11 +5,12 @@ import './App.css'
 
 function App() {
   // let counter = 5
-  //we are using react hook for state manipulation
+  //we are using react hook for state manipulation in UI
   let [counter, setCounter] = useState(15)
 
   //add function
   const addValue = () =>{
+    console.log("clicked", counter);
     if(counter >= 20){
       setCounter(20)
     }
