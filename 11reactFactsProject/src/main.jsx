@@ -6,7 +6,7 @@ import { createRoot } from 'react-dom/client'
 const root = createRoot(document.getElementById("root"))
 root.render(
   <main>
-    <img src="react-logo.jpg" width= "40" alt="React Logo" />
+    <img src="src/react-logo.jpg" width= "40px" alt="React Logo" />
   <h1>Fun facts about React</h1>
   <ul>
     <li>was first released in 2013</li>
