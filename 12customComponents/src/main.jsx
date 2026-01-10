@@ -6,6 +6,7 @@ import './index.css'
 const root = createRoot(document.getElementById("root"))
 
 //this is custom component -> provides composibility
+
 function Page() {
     return (
         <div>
