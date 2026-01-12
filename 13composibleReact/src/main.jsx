@@ -36,7 +36,7 @@ function MainContent() {
 function Footer() {
   return (
     <footer className='foot-items'>
-      <small>© 2026 chauhan development. All rights reserved.</small>
+      <small className='foot-inside'>© 2026 chauhan development. All rights reserved.</small>
     </footer>
   )
 }

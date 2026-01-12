@@ -5,7 +5,7 @@
 body{
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  background: #27292c;
+  background: #344661;
   color: white;
 }
 
@@ -17,8 +17,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
 }
 
 .nav-logo{
@@ -44,4 +43,10 @@ h1 {
   flex-shrink: 0;
   padding: 10px 0;
   width: 100%;
+}
+
+.foot-inside {
+  display: flex;
+  padding: 5px 10px;
+  
 }
