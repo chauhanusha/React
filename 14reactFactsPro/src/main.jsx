@@ -3,4 +3,7 @@ import './index.css'
 
 
 const root = createRoot(document.getElementById('root'))
+root.render(
+    <h1>Starting react fact project</h1>
+)
 
