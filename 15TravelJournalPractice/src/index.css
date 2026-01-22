@@ -26,3 +26,101 @@ header > h1{
     font-size: 0.9rem;
     font-weight: 500;
 }
+
+article.main-con{
+    display:  flex;
+}
+.main-con {
+    margin: 45px 40px;
+}
+
+.main-img-con {
+    width: 125px;
+    height: 168px;
+    overflow: hidden; 
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-right: 19px;
+}
+
+.main-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+article.main-con .small-img {
+    width: 7px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.info-con span.country {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-right: 12px;
+}
+
+.info-con a {
+    color: #2B283A;
+    font-size: 0.7rem;
+}
+
+.info-con h2.title {
+    margin-top: 7px;
+    margin-bottom: 17px;
+}
+
+.info-con a:visited {
+     color: #918E9B;
+}
+
+.info-con p.dates {
+    margin-top: 7px;
+    margin-bottom: 17px;
+    font-weight: 600;
+}
+
+.info-con p.entry-text {
+    
+    line-height: 1.5;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+
+
+/* this is when we directly access the children, but we should make class so that we don't access them directly */
+/* main > img {
+    width:  125px;
+    height: 108px;
+    margin-top: 100px;
+    margin-left: 40px;
+    border-radius: 5px;
+}
+
+div > img {
+    width: 7px;
+    height: 9.55px;
+    margin-top: 120px;
+    margin-left: 184px;
+}
+
+div > span {
+    width: 40px;
+    height: 10px;
+    margin-top: 119px;
+    margin-left: 19px;
+}
+
+div > a{
+    width: 106px;
+    height: 13px;
+    margin-top: 119px;
+    margin-left: 247px;
+    color: #918E9B;
+} */
+
