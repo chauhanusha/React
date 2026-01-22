@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 55px;
+    background-color: #F55A5A;
+}
+
+header > img{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+header > h1{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
