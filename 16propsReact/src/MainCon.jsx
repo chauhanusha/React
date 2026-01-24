@@ -1,29 +1,29 @@
 import Contact from "./Contact"
-import cat from "./cat.png"
+import cats from "./cat.png"
 
 function MainCon(){
     return(
          <div className="contacts">
             <Contact
-                img={cat}
+                img={cats}
                 name="Mr. Whiskerson"
                 phone="(212) 555-1234"
                 email="mr.whiskaz@catnap.meow"
             />
             <Contact
-                img={cat}
+                img={cats}
                 name="Fluffykins"
                 phone="(212) 555-2345"
                 email="fluff@me.com"
             />
             <Contact
-                img={cat}
+                img={cats}
                 name="Felix"
                 phone="(212) 555-4567"
                 email="thecat@hotmail.com"
             />
             <Contact 
-                img={cat}
+                img={cats}
                 name="Pumpkin"
                 phone="(0800) CAT KING"
                 email="pumpkin@scrimba.com"
