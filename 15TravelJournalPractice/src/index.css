@@ -29,6 +29,7 @@ header > h1{
 
 article.main-con{
     display:  flex;
+    margin-bottom: 36px;
 }
 .main-con {
     margin: 45px 40px;
