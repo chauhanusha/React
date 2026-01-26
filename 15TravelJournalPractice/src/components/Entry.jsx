@@ -1,8 +1,9 @@
 export default function Entry(props) {
+    console.log(props)
     return (
         <article className="main-con">
             <div className="main-img-con">
-                <img className="main-img" src={props.img.src} alt="mount" />
+                <img className="main-img" src={props.img.src} alt={props.img.alt} />
             </div>
 
             <div className="info-con">
