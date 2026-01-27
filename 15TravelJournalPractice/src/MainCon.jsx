@@ -6,7 +6,7 @@ export default function MainCon() {
     const entryArr = entries.map((entry) => {
         return (<Entry
             key={entry.id}
-            entry={entry}
+            {...entry}
         />)
     })
     return (
