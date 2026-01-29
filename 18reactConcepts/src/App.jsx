@@ -1,15 +1,22 @@
+import React from "react"
 export default function App(){
+
+  //understanding state
+  let [isImportant, setIsImportant] = React.useState("hello")
+
   function handleClick(){
-    console.log("i am clicked")
+    setIsImportant("hello world")
   }
 
+  //event understanding
   function handleOver(){
     console.log("hover over button")
   }
 
   return (
     <div>
-      <button onMouseOver={handleOver}>click me!</button>
+      <h1>understanding states</h1>
+      <button onClick={handleClick}>{isImportant}</button>
     </div>
   )
 }
