@@ -4,7 +4,9 @@ export default function MainCon(){
     let [count, setCount] = React.useState(0)
 
     function handleAddClick(){
-        setCount(count+1)
+        setCount(function(prevCount){
+            return prevCount + 1;
+        })
     }
 
     function handleDeleteClick(){
