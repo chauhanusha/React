@@ -10,7 +10,7 @@ export default function MainCon(){
     }
 
     function handleDeleteClick(){
-        setCount(count-1)
+        setCount(prevCount=> prevCount - 1)  //using arrow function
     }
 
     return (
