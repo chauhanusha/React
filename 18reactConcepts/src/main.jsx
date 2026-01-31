@@ -6,5 +6,4 @@ import ToggleCom from './ToggleCom.jsx'
 
 createRoot(document.getElementById('root')).render(
     <ToggleCom />
-
 )

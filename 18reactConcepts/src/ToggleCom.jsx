@@ -5,7 +5,6 @@ export default function ToggleCom(){
 
     function changeMind(){
         setIsGoingOut(prev => !prev)
-
     }
 
     return(
