@@ -1,5 +1,6 @@
+import React from "react"
 export default function MainCon(){
-    const ingredientArr = ["Chicken", "Oregano", "Tomatoes"]
+    const [ingredientArr, setIngredients] = React.useState([])
 
     //mapping over ingredent array
     const ingredientItems = ingredientArr.map((items) => {
@@ -14,8 +15,13 @@ export default function MainCon(){
         const formData = new FormData(event.currentTarget)   //we are accessing the form data through dom
         const newIngredient = formData.get("ingredient")   //getting the data that is entered in form
         // console.log(newIngredient)
-        ingredientArr.push(newIngredient)
-        console.log(ingredientArr)
+        // ingredientArr.push(newIngredient)
+        // console.log(ingredientArr)
+
+        //using states=> updating page
+        setIngredients(prevIngre => [
+            ...prevIngre, newIngredient
+        ])
     }
     return (
         <main>
