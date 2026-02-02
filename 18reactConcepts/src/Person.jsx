@@ -13,7 +13,9 @@ export default function Person(){
     function toggleFav(){
      setContact(prevContact => ({
         ...prevContact,
+        lastName : "Arora",
         isFav : !prevContact.isFav
+
      }))
     }
 
@@ -25,7 +27,7 @@ export default function Person(){
                     >{contact.isFav ? "yes" : "no"}
                     </button>
                 <h2>
-                        {contact.firstName} {contact.lastName}
+                        {contact.firstName} {contact.lastName = contact.isFav? "Sharma" : "Arora"}
                     </h2>
                     <p className="contact">{contact.phone}</p>
                     <p className="contact">{contact.email}</p>
