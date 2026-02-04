@@ -9,10 +9,10 @@ export default function MainCon(){
         )
     })
 
-    function handleSubmit(event){
-        event.preventDefault()   //preventing our page from refreshing again and again
-        console.log("form is submitted")
-        const formData = new FormData(event.currentTarget)   //we are accessing the form data through dom
+    function addIngredient(formData){
+        // event.preventDefault()   //preventing our page from refreshing again and again
+        // console.log("form is submitted")
+        // const formData = new FormData(event.currentTarget)   //we are accessing the form data through dom
         const newIngredient = formData.get("ingredient")   //getting the data that is entered in form
         // console.log(newIngredient)
         // ingredientArr.push(newIngredient)
@@ -25,7 +25,7 @@ export default function MainCon(){
     }
     return (
         <main>
-            <form onSubmit={handleSubmit} className="ingredient-form">
+            <form action={addIngredient} className="ingredient-form">
                 <input 
                 aria-label="Add ingredient" type="text" placeholder="e.g oregano" name="ingredient"/>
                 <button>Add ingredient</button>
