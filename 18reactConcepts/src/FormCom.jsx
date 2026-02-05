@@ -17,10 +17,13 @@ export default function FormCom(){
             <h1>Sign up form</h1>
            <form action={signUp}>
              <label htmlFor="email">Email:</label>
-            <input id="email" type="email" name='email' placeholder='email' />
+            <input id="email" type="email" defaultValue="this@gmail.com" name='email' placeholder='email' />
             <br />
             <label htmlFor="password">Password:</label>
-            <input id="password" type="password" name='password' />
+            <input id="password" type="password" defaultValue="password123" name='password' />
+            <br />
+            <label htmlFor='description'>Description:</label>
+            <textarea name="description" id="description"></textarea>
             <br />
             <button>Submit</button>
            </form>
