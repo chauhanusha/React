@@ -8,9 +8,11 @@ export default function FormCom(){
         // const formData = new FormData(formEl)
         const email = formData.get("email")
         const password = formData.get("password")
+        const employmentStatus = formData.get("employmentStatus")
         //formEl.reset()
         console.log(email)
         console.log(password)
+        console.log(employmentStatus)
     }
     return (
         <section>
@@ -25,6 +27,17 @@ export default function FormCom(){
             <label htmlFor='description'>Description:</label>
             <textarea name="description" id="description"></textarea>
             <br />
+            <fieldset>
+                <legend>Employment Status:</legend>
+                <label>
+                    <input type="radio" name='employmentStatus' defaultChecked={true} value="employed"/>
+                    Employed
+                </label>
+                <label>
+                    <input type="radio" name='employmentStatus' value="part-time"/>
+                    Part-Time
+                </label>
+            </fieldset>
             <button>Submit</button>
            </form>
 
