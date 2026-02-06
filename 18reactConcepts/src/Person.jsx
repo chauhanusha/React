@@ -1,4 +1,5 @@
 import React from "react";
+import Star from "./Star";
 
 export default function Person(){
     const [contact, setContact] = React.useState({
@@ -22,10 +23,9 @@ export default function Person(){
     return (
         <main>
             <div>
-                 <button
-                        onClick={toggleFav}
-                    >{contact.isFav ? "yes" : "no"}
-                    </button>
+                 <Star 
+                 //here by using handleClick we are providing custom function which will 
+                 isFilled = {contact.isFav} handleClick={toggleFav}/>
                 <h2>
                         {contact.firstName} {contact.lastName = contact.isFav? "Sharma" : "Arora"}
                     </h2>

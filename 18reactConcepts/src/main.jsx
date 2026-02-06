@@ -9,5 +9,5 @@ import FormCom from './FormCom.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-    <FormCom />
+    <Person />
 )
