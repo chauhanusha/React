@@ -1,15 +1,12 @@
 import React from "react"
 import padsData from "./pads"
+import Pad from "./Pad"
 
 function App({darkMode}) {
   const [pads, setPads] = React.useState(padsData)
 
-  const styles = {
-    backgroundColor : darkMode ? "#222222" : "#cccccc"
-  }
-
   const buttonDataEl = pads.map((pad) => (
-    <button style={styles} key={pad.id}></button>
+    <Pad key={pad.id} color={pad.color}/>
   ))
 
   return (
