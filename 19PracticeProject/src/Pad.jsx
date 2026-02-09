@@ -9,7 +9,7 @@ export default function Pad(props){
     return (
         <button 
         style={{backgroundColor: props.color}}
-        className = {on ? "on" : null}
+        className = {on ? "on" : undefined}
         onClick={toggleBut}>
         </button>
         
