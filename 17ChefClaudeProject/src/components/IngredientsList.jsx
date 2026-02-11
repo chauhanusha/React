@@ -1,4 +1,4 @@
-export default function IngredientsList(){
+export default function IngredientsList(props){
     return (
         <section>
                 <h2>Ingredients on hand:</h2>
