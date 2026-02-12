@@ -36,7 +36,8 @@ export default function MainCon(){
                 aria-label="Add ingredient" type="text" placeholder="e.g oregano" name="ingredient"/>
                 <button>Add ingredient</button>
             </form>
-            {ingredientArr.length > 0 && <IngredientsList />}
+            {ingredientArr.length > 0 && <IngredientsList 
+            ingredientItems={ingredientItems} ingredientArr = {ingredientArr} toggle={handleClick}/>}
              {recipeShown && <ClaudeRecipe />}
             </main>
     )
