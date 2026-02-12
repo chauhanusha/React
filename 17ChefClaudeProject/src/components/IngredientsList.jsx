@@ -1,9 +1,15 @@
 export default function IngredientsList(props){
     
+    const ingredientItems = props.ingredientArr.map((items) => {
+        return (
+            <li key={items}>{items}</li>
+        )
+    })
+
     return (
         <section>
                 <h2>Ingredients on hand:</h2>
-                <ul className="ingredients-list" aria-live="polite">{props.ingredientItems}</ul>
+                <ul className="ingredients-list" aria-live="polite">{ingredientItems}</ul>
                 {props.ingredientArr.length > 3 && <div className="get-recipe-container">
                     <div>
                         <h3>Ready for a recipe?</h3>

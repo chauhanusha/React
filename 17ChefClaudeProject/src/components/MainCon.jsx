@@ -6,11 +6,6 @@ export default function MainCon(){
     const [ingredientArr, setIngredients] = React.useState([])
     const [recipeShown, setRecipeShown] = React.useState(false)
     //mapping over ingredent array
-    const ingredientItems = ingredientArr.map((items) => {
-        return (
-            <li key={items}>{items}</li>
-        )
-    })
 
     function handleClick(){
         setRecipeShown(preVal => preVal=true)
@@ -37,7 +32,8 @@ export default function MainCon(){
                 <button>Add ingredient</button>
             </form>
             {ingredientArr.length > 0 && <IngredientsList 
-            ingredientItems={ingredientItems} ingredientArr = {ingredientArr} toggle={handleClick}/>}
+             ingredientArr = {ingredientArr} toggle={handleClick}/>}
+             
              {recipeShown && <ClaudeRecipe />}
             </main>
     )
