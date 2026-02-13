@@ -5,7 +5,7 @@ import {getRecipeFromMistral} from "../ai"
 
 export default function MainCon(){
     const [ingredientArr, setIngredients] = React.useState([])
-    const [recipeShown, setRecipeShown] = React.useState(false)
+    const [recipe, setRecipe] = React.useState(false)
     //mapping over ingredent array
 
     async function getRecipe(){
@@ -36,7 +36,8 @@ export default function MainCon(){
             {ingredientArr.length > 0 && <IngredientsList 
              ingredientArr = {ingredientArr} getRecipe={getRecipe}/>}
              
-             {recipeShown && <ClaudeRecipe />}
+             {recipeShown && <ClaudeRecipe 
+             recipe = {recipe}/>}
             </main>
     )
 }
