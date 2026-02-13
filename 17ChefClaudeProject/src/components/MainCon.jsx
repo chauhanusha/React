@@ -1,18 +1,18 @@
 import React from "react"
 import ClaudeRecipe from "./ClaudeRecipe"
 import IngredientsList from "./IngredientsList"
-import {getRecipeFromMistral} from "../ai"
+import { getRecipeFromMistral } from "../ai"
 
-export default function MainCon(){
+export default function MainCon() {
     const [ingredientArr, setIngredients] = React.useState([])
     const [recipe, setRecipe] = React.useState(false)
     //mapping over ingredent array
 
-    async function getRecipe(){
+    async function getRecipe() {
         const recipeMarkdown = await getRecipeFromMistral(ingredientArr)
         console.log(recipeMarkdown)
     }
-    function addIngredient(formData){
+    function addIngredient(formData) {
         // event.preventDefault()   //preventing our page from refreshing again and again
         // console.log("form is submitted")
         // const formData = new FormData(event.currentTarget)   //we are accessing the form data through dom
@@ -29,15 +29,15 @@ export default function MainCon(){
     return (
         <main>
             <form action={addIngredient} className="ingredient-form">
-                <input 
-                aria-label="Add ingredient" type="text" placeholder="e.g oregano" name="ingredient"/>
+                <input
+                    aria-label="Add ingredient" type="text" placeholder="e.g oregano" name="ingredient" />
                 <button>Add ingredient</button>
             </form>
-            {ingredientArr.length > 0 && <IngredientsList 
-             ingredientArr = {ingredientArr} getRecipe={getRecipe}/>}
-             
-             {recipeShown && <ClaudeRecipe 
-             recipe = {recipe}/>}
-            </main>
+            {ingredientArr.length > 0 && <IngredientsList
+                ingredientArr={ingredientArr} getRecipe={getRecipe} />}
+
+            {recipe && <ClaudeRecipe
+                recipe={recipe} />}
+        </main>
     )
 }
