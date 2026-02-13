@@ -1,14 +1,16 @@
 import React from "react"
 import ClaudeRecipe from "./ClaudeRecipe"
 import IngredientsList from "./IngredientsList"
+import {getRecipeFromMistral} from "../ai"
 
 export default function MainCon(){
     const [ingredientArr, setIngredients] = React.useState([])
     const [recipeShown, setRecipeShown] = React.useState(false)
     //mapping over ingredent array
 
-    function handleClick(){
-        setRecipeShown(preVal => preVal=true)
+    async function getRecipe(){
+        const recipeMarkdown = await getRecipeFromMistral(ingredientArr)
+        console.log(recipeMarkdown)
     }
     function addIngredient(formData){
         // event.preventDefault()   //preventing our page from refreshing again and again
@@ -32,7 +34,7 @@ export default function MainCon(){
                 <button>Add ingredient</button>
             </form>
             {ingredientArr.length > 0 && <IngredientsList 
-             ingredientArr = {ingredientArr} toggle={handleClick}/>}
+             ingredientArr = {ingredientArr} getRecipe={getRecipe}/>}
              
              {recipeShown && <ClaudeRecipe />}
             </main>
