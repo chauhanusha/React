@@ -5,12 +5,12 @@ import { getRecipeFromMistral } from "../ai"
 
 export default function MainCon() {
     const [ingredientArr, setIngredients] = React.useState([])
-    const [recipe, setRecipe] = React.useState(false)
+    const [recipe, setRecipe] = React.useState("")
     //mapping over ingredent array
 
     async function getRecipe() {
         const recipeMarkdown = await getRecipeFromMistral(ingredientArr)
-        console.log(recipeMarkdown)
+        setRecipe(recipeMarkdown)
     }
     function addIngredient(formData) {
         // event.preventDefault()   //preventing our page from refreshing again and again

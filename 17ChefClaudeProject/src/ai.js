@@ -5,11 +5,11 @@ You are an assistant that receives a list of ingredients that a user has and sug
 
 const hf = new InferenceClient(import.meta.env.VITE_HF_ACCESS_TOKEN)
 
-export async function getRecipeFromMistral(ingredientsArra) {
-    const ingredientsString = ingredientsArra.join(", ")
+export async function getRecipeFromMistral(ingredients) {
+    const ingredientsString = ingredients.join(", ")
     try {
         const response = await hf.chatCompletion({
-            model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
+            model: "Qwen/Qwen2.5-7B-Instruct",
             messages: [
                 { role: "system", content: SYSTEM_PROMPT },
                 { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
@@ -18,6 +18,7 @@ export async function getRecipeFromMistral(ingredientsArra) {
         })
         return response.choices[0].message.content
     } catch (err) {
+        // console.error("Full error;", err)
         console.error(err.message)
     }
 }
