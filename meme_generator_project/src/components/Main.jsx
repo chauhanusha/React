@@ -1,0 +1,22 @@
+export default function Main() {
+    return (
+        <main>
+            <div className="form">
+                <label htmlFor="top">Top Text
+                    <input type="text" name="top" />
+                </label>
+
+                <label htmlFor="bottom">Bottom Text
+                    <input type="text" name="bottom" />
+                </label>
+                <button>Get a new meme image 🖼</button>
+            </div>
+
+            <div className="meme">
+                <img src="src/images/image2.png" alt="" />
+                <span className="topLine">One does not </span>
+                <span className="bottomLine">walk into mirror</span>
+            </div>
+        </main>
+    )
+}
