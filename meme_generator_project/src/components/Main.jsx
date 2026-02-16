@@ -1,4 +1,12 @@
+import { useState } from "react"
+
 export default function Main() {
+
+    const [meme, setMeme] = useState({
+        topText: "One does not",
+        bottomText: "walk into mirror",
+        imageUrl: "src/images/image2.png"
+    })
     return (
         <main>
             <div className="form">
@@ -13,9 +21,9 @@ export default function Main() {
             </div>
 
             <div className="meme">
-                <img src="src/images/image2.png" alt="" />
-                <span className="topLine">One does not </span>
-                <span className="bottomLine">walk into mirror</span>
+                <img src={meme.imageUrl} alt="" />
+                <span className="topLine">{meme.topText}</span>
+                <span className="bottomLine">{meme.bottomText}</span>
             </div>
         </main>
     )
