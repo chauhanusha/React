@@ -7,15 +7,32 @@ export default function Main() {
         bottomText: "walk into mirror",
         imageUrl: "src/images/image2.png"
     })
+
+    function handleChange(event){
+        const {value, name} = event.currentTarget
+
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name] : value,
+            
+        }))
+
+    }
+
     return (
         <main>
             <div className="form">
-                <label htmlFor="top">Top Text
-                    <input type="text" name="top" />
+                <label htmlFor="topText">Top Text
+                    <input type="text" name="topText" 
+                    onChange={handleChange}
+                    value={meme.topText}/>
+                    
                 </label>
 
-                <label htmlFor="bottom">Bottom Text
-                    <input type="text" name="bottom" />
+                <label htmlFor="bottomText">Bottom Text
+                    <input type="text" name="bottomText" 
+                    onChange={handleChange}
+                    value={meme.bottomText}/>
                 </label>
                 <button>Get a new meme image 🖼</button>
             </div>
