@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function Main() {
 
     const [meme, setMeme] = useState({
-        topText: "One does not",
+        topText: "One does not accidently",
         bottomText: "walk into mirror",
         imageUrl: "src/images/image2.png"
     })
