@@ -6,8 +6,9 @@ import ToggleCom from './ToggleCom.jsx'
 import ItemCon from './ItemCon.jsx'
 import Person from './Person.jsx'
 import FormCom from './FormCom.jsx'
+import StarWar from './StarWar.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-    <Person />
+    <StarWar />
 )
