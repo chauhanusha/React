@@ -23,14 +23,14 @@ export default function Main() {
         <main>
             <div className="form">
                 <label htmlFor="topText">Top Text
-                    <input type="text" name="topText" 
+                    <input type="text" placeholder="One does not accidently" name="topText" 
                     onChange={handleChange}
                     value={meme.topText}/>
                     
                 </label>
 
                 <label htmlFor="bottomText">Bottom Text
-                    <input type="text" name="bottomText" 
+                    <input type="text" placeholder="walk into mirror" name="bottomText" 
                     onChange={handleChange}
                     value={meme.bottomText}/>
                 </label>
