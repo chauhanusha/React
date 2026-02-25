@@ -10,7 +10,7 @@ export default function StarWar(){
         fetch("https://swapi.dev/api/people/1")
             .then(res => res.json())
             .then(data => setStarWarData(data))
-       }, [count])
+       }, [0])
      
     console.log("Rendered!")
     
