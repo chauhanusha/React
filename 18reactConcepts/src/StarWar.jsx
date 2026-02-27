@@ -13,11 +13,16 @@ export default function StarWar(){
        }, [count])
      
     console.log("Rendered!")
+
+    function handleClick(){
+        setCount(prevCount => prevCount + 1)
+    }
     
     return (
         <div>
             <h2>The count is {count}</h2>
-            <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
+            {/* <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button> */}
+            <button onClick= {handleClick}>Add</button>
             <pre>{JSON.stringify(starWarData, null, 2)}</pre>
         </div>
     )
