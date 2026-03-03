@@ -17,7 +17,7 @@ export default function StarWar(){
     function handleClick(){
         setCount(prevCount => prevCount + 1)
     }
-    
+    //important 
     return (
         <div>
             <h2>The count is {count}</h2>
