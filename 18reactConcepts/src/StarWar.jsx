@@ -20,6 +20,10 @@ export default function StarWar(){
     function handleChange(){
         console.log("changed")
     }
+
+    function handleHover(){
+        console.log("hovering over a button")
+    }
     //important 
     return (
         <div>
