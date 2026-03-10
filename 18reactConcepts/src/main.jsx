@@ -10,5 +10,5 @@ import StarWar from './StarWar.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-    <FormCom />
+    <App />
 )
