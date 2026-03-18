@@ -14,6 +14,11 @@ export default function StarWar(){
      
     console.log("Rendered!")
 
+    //creating a side effect using useEffect
+       React.useEffect(()=>{
+        console.log("effect function ran")
+       }, [count])
+
     function handleClick(){
         setCount(prevCount => prevCount + 1)
     }
@@ -21,9 +26,9 @@ export default function StarWar(){
         console.log("changed")
     }
 
-    function handleHover(){
-        console.log("hovering over a button")
-    }
+    // function handleHover(){
+    //     console.log("hovering over a button")
+    // }
     //important 
     return (
         <div>
