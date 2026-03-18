@@ -17,7 +17,7 @@ export default function StarWar(){
     //creating a side effect using useEffect
        React.useEffect(()=>{
         console.log("effect function ran")
-       }, [count])
+       }, [])  //using [] as this function doesn't depend on count variable
 
     function handleClick(){
         setCount(prevCount => prevCount + 1)
