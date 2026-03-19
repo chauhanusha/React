@@ -10,14 +10,14 @@ export default function StarWar(){
         fetch("https://swapi.dev/api/people/1")
             .then(res => res.json())
             .then(data => setStarWarData(data))
-       }, [count])
+       }, [])  //using [] empty array as this effect doesn't depend on count variable
      
     console.log("Rendered!")
 
     //creating a side effect using useEffect
        React.useEffect(()=>{
         console.log("effect function ran")
-       }, [])  //using [] as this function doesn't depend on count variable
+       })
 
     function handleClick(){
         setCount(prevCount => prevCount + 1)
